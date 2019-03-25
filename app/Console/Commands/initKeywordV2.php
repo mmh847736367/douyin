@@ -51,7 +51,7 @@ class initKeywordV2 extends Command
     public function handle()
     {
         $wd1 = Storage::get('搞笑.json');
-        $wd2 = Storage::get('游戏.json');
+        $wd2 = Storage::get('萌宠.json');
         $wd3 = Storage::get('美女.json');
         $wd4 = Storage::get('舞蹈.json');
         $wd5 = Storage::get('美妆.json');
