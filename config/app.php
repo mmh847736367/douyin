@@ -55,7 +55,7 @@ return [
     'url' => env('APP_URL', 'http://douyin.test'),
     'mobile_url' => env('APP_MOBILEU_URL', 'http://douyin.test'),
     'asset_url' => env('ASSET_URL', null),
-    'asset_mobile_url' => env('ASSET_URL', null),
+    'asset_mobile_url' => env('ASSET_MOBILE_URL', null),
     'kwd' => '短视频',
     'desc' => '好多美女的短视频网站',
     /*
