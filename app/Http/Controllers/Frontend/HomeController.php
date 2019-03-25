@@ -66,7 +66,6 @@ class HomeController extends Controller
 
     public function index()
     {
-        dd(config('app.env'), isMobile());
         $this->viewData['v1'] = $this->_getVideosByTid(0);
         $this->viewData['v2'] = $this->_getVideosByTid(474);
         $this->viewData['v3'] = $this->_getVideosByTid(63);
