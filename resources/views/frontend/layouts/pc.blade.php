@@ -36,7 +36,6 @@
     </p>
 </div>
 
-{{ script(url('js/frontend.js')) }}
 
 </body>
 </html>
