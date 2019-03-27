@@ -19,7 +19,7 @@
     @endif
     <script>
         if(! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-            window.location = window.location.href.replace("www.jiujiudaquan.com","m.jiujiudaquan.com");
+            window.location = window.location.href.replace("m.jiujiudaquan.com","www.jiujiudaquan.com");
         }
     </script>
 </head>
