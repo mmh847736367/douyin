@@ -19,7 +19,7 @@
     @endif
     <script>
         if(! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-            window.location = window.location.href.replace("{{ config('app.asset_url') }}","{{ config('app.asset_mobile_url') }}");
+            window.location = window.location.href.replace("www.jiujiudaquan.com","m.jiujiudaquan.com");
         }
     </script>
 </head>
