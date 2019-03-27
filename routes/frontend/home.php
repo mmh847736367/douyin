@@ -13,7 +13,7 @@ use App\Http\Middleware\RedirectForSeo;
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
 Route::middleware(RedirectForSeo::class)->group(function() {
-    Route::get('search/{slug}', [HomeController::class, 'search'])->name('search');
+    Route::get('wd/{slug}', [HomeController::class, 'search'])->name('search');
     Route::get('sq{slug}/{page?}', [HomeController::class, 'category'])->name('category')->where('page', '[0-9]+\.html');
 });
 
