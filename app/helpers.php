@@ -196,7 +196,7 @@ if (!function_exists('isMobile')) {
         if (config('app.env') == 'local') {
             return true;
         }else {
-            return strpos($_SERVER['HTTP_HOST'], "m.douyin") !== false;
+            return strpos($_SERVER['HTTP_HOST'], "m.jiujiudaquan") !== false;
         }
     }
 }
