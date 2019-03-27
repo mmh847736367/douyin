@@ -194,7 +194,7 @@ if (!function_exists('isMobile')) {
 
     function isMobile() {
         if (config('app.env') == 'local') {
-            return true;
+            return false;
         }else {
             return strpos($_SERVER['HTTP_HOST'], "m.jiujiudaquan") !== false;
         }

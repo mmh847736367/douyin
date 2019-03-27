@@ -56,8 +56,7 @@ return [
     'mobile_url' => env('APP_MOBILEU_URL', 'http://douyin.test'),
     'asset_url' => env('ASSET_URL', null),
     'asset_mobile_url' => env('ASSET_MOBILE_URL', null),
-    'kwd' => '短视频',
-    'desc' => '好多美女的短视频网站',
+    'desc' => '久久大全网是专业的在线视频网站，为您提供娱乐、话题、生活资讯、搞笑视频以及电影、电视剧、综艺节目、纪录片、动漫等相关视频内容，满足用户在线观看，为用户提供极致的在线观看体验验',
     /*
     |--------------------------------------------------------------------------
     | Application Timezone

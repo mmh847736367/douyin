@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -14,14 +14,15 @@
     <title>@yield('title', config('app.name'))</title>
     {{ style(url('css/wwww.css')) }}
     @if(request()->is('/'))
-    <meta name="keywords" content="{{ config('app.kwd') }}">
     <meta name="description" content="{{ config('app.desc') }}">
     @endif
+    @if(config('app.env') != 'local')
     <script>
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
             window.location = window.location.href.replace("www.jiujiudaquan.com","m.jiujiudaquan.com");
         }
     </script>
+    @endif
 </head>
 <body>
 
@@ -35,6 +36,7 @@
     </p>
 </div>
 
+{{ script(url('js/frontend.js')) }}
 
 </body>
 </html>

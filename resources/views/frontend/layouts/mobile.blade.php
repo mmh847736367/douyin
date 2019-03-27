@@ -14,14 +14,15 @@
     <link rel="icon" href="/favicon.ico" type="images/x-icon">
     {{ style(url('css/mobilecss.css')) }}
     @if(request()->is('/'))
-    <meta name="keywords" content="{{ config('app.kwd') }}">
     <meta name="description" content="{{ config('app.desc') }}">
     @endif
+    @if(config('app.env') != 'local')
     <script>
         if(! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
             window.location = window.location.href.replace("m.jiujiudaquan.com","www.jiujiudaquan.com");
         }
     </script>
+    @endif
 </head>
 <body>
 @include('frontend.includes.mobileNav')
