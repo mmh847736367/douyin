@@ -134,16 +134,17 @@ class HomeController extends Controller
 
         $message = [
             'required' => '搜索内容不能为空！',
-            'max' => '搜索内容过长！'
+            'max' => '搜索内容过长！',
+            'min' => '搜索内容过短！'
         ];
         $validator = \Validator::make($request->all(),[
-            'wd' => 'required|max:10'
+            'wd' => 'required|max:10|min:1'
         ],$message);
 
         if($validator->fails()) {
             return redirect()->route('frontend.index');
         }
-        
+
         $wd = $request->input('wd');
 
         $word = $this->keywordRespository->create(['name' => $wd]);
