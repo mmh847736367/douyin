@@ -131,9 +131,19 @@ class HomeController extends Controller
 
     public function userSearch(Request $request)
     {
-        $request->validate([
-            'wd' => 'required|max:15|min:2'
-        ]);
+
+        $message = [
+            'required' => '搜索内容不能为空！',
+            'max' => '搜索内容过长！'
+        ];
+        $validator = \Validator::make($request->all(),[
+            'wd' => 'required|max:10'
+        ],$message);
+
+        if($validator->fails()) {
+            return redirect()->route('frontend.index');
+        }
+        
         $wd = $request->input('wd');
 
         $word = $this->keywordRespository->create(['name' => $wd]);
